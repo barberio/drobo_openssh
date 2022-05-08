@@ -51,7 +51,7 @@ sed -i -e "s/sshd\.pid/pid.txt/" pathnames.h
   --with-zlib="${DEPS}" --with-ssl-dir="${DEPS}" \
   --with-pid-dir=/tmp/DroboApps/openssh --with-privsep-path="${DEST}/var/empty" \
   --with-privsep-user=sshd \
-  --with-sandbox=rlimit select_works_with_rlimit=yes
+  --with-sandbox=rlimit select_works_with_rlimit=no
 make
 make install-nokeys
 mv "${DEST}/etc"/ssh_config{,.default}
